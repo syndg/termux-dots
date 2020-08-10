@@ -73,3 +73,8 @@ elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
 fi
 
 unset env
+
+# function for commit authorship
+gauthor() {
+    python3 $HOME/gauthor.py $1 | bash
+}
